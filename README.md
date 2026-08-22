@@ -21,7 +21,6 @@ background processing.
 - [API reference](#api-reference)
 - [Testing](#testing)
 - [Design decisions & assumptions](#design-decisions--assumptions)
-- [Possible improvements](#possible-improvements)
 
 ---
 

@@ -221,19 +221,6 @@ Base URL: `http://localhost:5172`
 | GET | `/api/tasks/{id}` | Authenticated | Get one of the caller's tasks (Redis-cached) |
 | PUT | `/api/tasks/{id}/status` | Authenticated | Update task status (invalidates cache) |
 
-### Example
-```bash
-# 1) Log in
-curl -X POST http://localhost:5172/api/users/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"admin@example.com","password":"Admin@123"}'
-
-# 2) Create a task (use the accessToken from step 1)
-curl -X POST http://localhost:5172/api/tasks \
-  -H "Authorization: Bearer <accessToken>" \
-  -H "Content-Type: application/json" \
-  -d '{"title":"Write report","description":"Q3 summary","priority":2}'
-```
 
 `priority`: `0 = Low`, `1 = Medium`, `2 = High`. Task `status`: `Pending`,
 `InProgress`, `Done`.
@@ -275,12 +262,3 @@ per-user title uniqueness, priority-then-date sorting, ownership isolation, stat
 - **Secrets in `appsettings.json`** (JWT key) are committed for ease of review. In a real
   project these belong in User Secrets / environment variables and would be rotated.
 
----
-
-## Possible improvements
-
-- Move secrets to User Secrets / environment variables and rotate the JWT key.
-- Add FluentValidation for request DTOs and standardize error responses (ProblemDetails).
-- Add integration tests (e.g. `WebApplicationFactory`) alongside the unit tests.
-- Add pagination and filtering to the task and user list endpoints.
-- Add structured logging and health checks.

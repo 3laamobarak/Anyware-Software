@@ -56,7 +56,7 @@ testable.
           └──────┬──────┘
                  │
           ┌──────▼──────┐
-          │   Domain    │  Entities, enums, repository/UoW abstractions
+          │   Domain    │  Entities, enums, repository/Unit Of Work abstractions
           └─────────────┘
                  ▲
           ┌──────┴──────┐

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="AnyWareSoftWare.API/AnyWareSoftWare.API.csproj" />
+  <Project Path="AnyWareSoftWare.Application/AnyWareSoftWare.Application.csproj" />
+  <Project Path="AnyWareSoftWare.Domain/AnyWareSoftWare.Domain.csproj" />
+  <Project Path="AnyWareSoftWare.Infrastructure/AnyWareSoftWare.Infrastructure.csproj" />
+  <Project Path="AnyWareSoftWare.Tests/AnyWareSoftWare.Tests.csproj" />
+</Solution>
